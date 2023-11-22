@@ -1,0 +1,40 @@
+<?xml-model href=""?>
+<project>xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://www.w3.org/2001/XMLSchema-instance"</project>
+	
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>enviando-mail</artifactId>
+	<version>0.0.1-SNAPSHOP</version>
+	<packaging>jar</packaging>
+	
+	<name>enviando-mail</name>
+	<url>http://maven.apache.org</url>
+	
+	<properties>
+		<project.build.sourceEcoding>UTF-8</project.build.sourceEcoding>
+	</properties>
+	
+	<dependencies>
+	
+	<dependency>
+	
+	<groupId>junit</groupId>
+	<version>4.12</version>
+	<scope>test</scope>
+	
+	</dependency>
+	
+	<dependency>
+	<groupId>com.sun.mail</groupId>
+	<artifactId>javax.mail</artifactId>
+	<version>1.6.2</version>
+	</dependency>
+	
+	</dependencies>
+	
+	
+	
+	
+	
+	
+	
