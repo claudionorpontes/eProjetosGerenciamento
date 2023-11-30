@@ -1,2 +1,0 @@
-commit.comment.template=${task.key}\: ${task.description}\r\n\r\nTask-Url\: ${https\://github.com/claudionorpontes/eProjetosGerenciamento}
-eclipse.preferences.version=1

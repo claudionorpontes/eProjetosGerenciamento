@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>front-core</title>
+	<title>Single Page Applications</title>
 </head>
 <body>
 
