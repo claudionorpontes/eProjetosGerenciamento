@@ -1,6 +1,5 @@
-package org.jboss.tools.example.springmvc.core.requests;
+package teste.unitarios;
 
-import org.apache.catalina.authenticator.SavedRequest;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -28,7 +27,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-
 
 import com.hackerrank.test.utility.Order;
 import com.hackerrank.test.utility.OrderedTestRunner;
@@ -127,7 +125,7 @@ public class GreetingsControllerTest<Usuario> {
             .getResponse()
             .getContentAsString();
 
-        Assert.assertEquals(response, "Hello RodJohnson!");
+        Assert.assertEquals(response, "Core Tecnologia!");
         
     }
     
@@ -152,6 +150,14 @@ public class GreetingsControllerTest<Usuario> {
 		
 		return new ResponseEntity<Usuario>(user, HttpStatus.CREATED);
 		
+	}
+
+	public Object getUsuarioRepository() {
+		return usuarioRepository;
+	}
+
+	public void setUsuarioRepository(Object usuarioRepository) {
+		this.usuarioRepository = usuarioRepository;
 	}
 
 	
