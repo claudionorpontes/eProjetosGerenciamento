@@ -1,7 +1,14 @@
 package org.jboss.tools.example.springmvc.core;
 
+import java.util.Objects;
+
 public class Projetos {
 
+	private static final Object encerrado = null;
+	private static final Object analisando = true;
+	private static final Object prosseguindo = true;
+	private static final Object iniciado = true;
+	
 	private String softwaresGestao;
 	private String comunicacaoInterna;
 	private String metodologiaAgia;
@@ -11,8 +18,9 @@ public class Projetos {
 	private String climaOrganizacional;
 	private String monitorarAcoes;
 	
+	
 	public String getSoftwaresGestao() {
-		return softwaresGestao;
+		return softwaresGestao;		
 	}
 	public void setSoftwaresGestao(String softwaresGestao) {
 		this.softwaresGestao = softwaresGestao;
@@ -60,7 +68,28 @@ public class Projetos {
 		this.monitorarAcoes = monitorarAcoes;
 	}
 	
+	@Override
+	public int hashCode() {
+		return Objects.hash(climaOrganizacional, comunicacaoInterna, homeOffice, metodologiaAgia, monitorarAcoes,
+				pesquisaDesenvolvimento, softwaresGestao, treinamentoPessoas);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Projetos other = (Projetos) obj;
+		return Objects.equals(climaOrganizacional, analisando)
+				&& Objects.equals(comunicacaoInterna, other.comunicacaoInterna)
+				&& Objects.equals(homeOffice, other.homeOffice)
+				&& Objects.equals(metodologiaAgia, prosseguindo)
+				&& Objects.equals(monitorarAcoes, other.monitorarAcoes)
+				&& Objects.equals(pesquisaDesenvolvimento, other.pesquisaDesenvolvimento)
+				&& Objects.equals(softwaresGestao, iniciado)
+				&& Objects.equals(treinamentoPessoas, encerrado);
+	}
 	
-	
-
 }
