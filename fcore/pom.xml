@@ -27,7 +27,16 @@
   </dependencyManagement>
 
   <dependencies>
-	  	
+    <classifier>
+		<version>eGerenciamentoProjetos</version>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+    <classifier>
+		
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </classifier>
+
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-devtools</artifactId>
@@ -90,8 +99,7 @@
       <version>1.0.1</version>
       <scope>test</scope>
     </dependency>
-    
-    </dependencies>
+  </dependencies>
 
   <build>
     <pluginManagement>
