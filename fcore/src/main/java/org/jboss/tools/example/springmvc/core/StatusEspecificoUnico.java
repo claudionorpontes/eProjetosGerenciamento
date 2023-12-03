@@ -1,5 +1,7 @@
 package org.jboss.tools.example.springmvc.core;
 
+import java.util.Objects;
+
 public class StatusEspecificoUnico {
 	
 	private String analisando;
@@ -59,5 +61,38 @@ public class StatusEspecificoUnico {
 	public void setCancelado(String cancelado) {
 		this.cancelado = cancelado;
 	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(analisando, analiseAprovada, analiseRealizada, cancelado, encerrado, iniciado, planejado,
+				prosseguindo);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		StatusEspecificoUnico other = (StatusEspecificoUnico) obj;
+		return Objects.equals(analisando, other.analisando) && Objects.equals(analiseAprovada, other.analiseAprovada)
+				&& Objects.equals(analiseRealizada, other.analiseRealizada)
+				&& Objects.equals(cancelado, other.cancelado) && Objects.equals(encerrado, other.encerrado)
+				&& Objects.equals(iniciado, other.iniciado) && Objects.equals(planejado, other.planejado)
+				&& Objects.equals(prosseguindo, other.prosseguindo);
+	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

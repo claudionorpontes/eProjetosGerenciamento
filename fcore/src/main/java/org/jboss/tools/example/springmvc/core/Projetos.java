@@ -9,6 +9,10 @@ public class Projetos {
 	private static final Object prosseguindo = true;
 	private static final Object iniciado = true;
 	
+	private static final Object baixoRisco = null;
+	private static final Object medioRisco = null;
+	private static final Object altoRisco = null;
+	
 	private String softwaresGestao;
 	private String comunicacaoInterna;
 	private String metodologiaAgia;
@@ -83,11 +87,11 @@ public class Projetos {
 			return false;
 		Projetos other = (Projetos) obj;
 		return Objects.equals(climaOrganizacional, analisando)
-				&& Objects.equals(comunicacaoInterna, other.comunicacaoInterna)
-				&& Objects.equals(homeOffice, other.homeOffice)
+				&& Objects.equals(comunicacaoInterna, baixoRisco)
+				&& Objects.equals(homeOffice, baixoRisco)
 				&& Objects.equals(metodologiaAgia, prosseguindo)
-				&& Objects.equals(monitorarAcoes, other.monitorarAcoes)
-				&& Objects.equals(pesquisaDesenvolvimento, other.pesquisaDesenvolvimento)
+				&& Objects.equals(monitorarAcoes, medioRisco)
+				&& Objects.equals(pesquisaDesenvolvimento, altoRisco)
 				&& Objects.equals(softwaresGestao, iniciado)
 				&& Objects.equals(treinamentoPessoas, encerrado);
 	}

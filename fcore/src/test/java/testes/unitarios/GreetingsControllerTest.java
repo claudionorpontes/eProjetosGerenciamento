@@ -1,4 +1,6 @@
-package teste.unitarios;
+package testes.unitarios;
+
+import java.util.List;
 
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -6,7 +8,9 @@ import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.jupiter.api.Order;
 import org.junit.rules.TestWatcher;
+import org.junit.rules.TestWatchman;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -28,14 +32,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hackerrank.test.utility.Order;
-import com.hackerrank.test.utility.OrderedTestRunner;
-import com.hackerrank.test.utility.TestWatchman;
-
-import antlr.collections.List;
-
-
-@RunWith(OrderedTestRunner.class)
+@SuppressWarnings({ "deprecation", "unused" })
 @SpringBootTest
 @AutoConfigureMockMvc
 @RestController
@@ -55,7 +52,7 @@ public class GreetingsControllerTest<Usuario> {
     public final SpringMethodRule springMethodRule = new SpringMethodRule();
 
     @Rule
-    public TestWatcher watchman = TestWatchman.watchman;
+    public TestWatcher watchman;
 
     @Autowired
     private MockMvc mockMvc;
@@ -66,15 +63,25 @@ public class GreetingsControllerTest<Usuario> {
 
     @BeforeClass
     public static void setUpClass() {
-        TestWatchman.watchman.registerClass(GreetingsControllerTest.class);
+        registerClass(GreetingsControllerTest.class);
     }
 
-    @AfterClass
+    @SuppressWarnings("rawtypes")
+	private static void registerClass(Class<GreetingsControllerTest> class1) {
+		
+		
+	}
+
+	@AfterClass
     public static void tearDownClass() {
-        TestWatchman.watchman.createReport(GreetingsControllerTest.class);
+        createReport(GreetingsControllerTest.class);
     }
 
-    /**
+    private static void createReport(@SuppressWarnings("rawtypes") Class<GreetingsControllerTest> class1) {
+		
+	}
+
+	/**
      *
      * @throws Exception
      *
@@ -129,16 +136,17 @@ public class GreetingsControllerTest<Usuario> {
         
     }
     
-    @GetMapping(value = "listatodos")
+    @SuppressWarnings("rawtypes")
+	@GetMapping(value = "listatodos")
     @ResponseBody
-    public ResponseEntity<List> listaUsuario(){
+    public ResponseEntity<List> listaUsuarioEntity(){
+		return null;
     	
-    	List usuarios = usuarioRepository();
-    	
-    	return new ResponseEntity<List>(usuarios, HttpStatus.OK);
     }
-
-	private List usuarioRepository() {
+    	   	
+    	
+	@SuppressWarnings("unused")
+	private HttpStatus usuarioRepository() {
 		return null;
 		
 	}
@@ -146,9 +154,8 @@ public class GreetingsControllerTest<Usuario> {
 	@PostMapping(value = "salvar")
 	@ResponseBody
 	public ResponseEntity<Usuario> salvar (@RequestBody Usuario usuario){
+		return null;
 		
-		
-		return new ResponseEntity<Usuario>(user, HttpStatus.CREATED);
 		
 	}
 
